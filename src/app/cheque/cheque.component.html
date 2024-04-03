@@ -1,0 +1,12 @@
+<h2> Cheque Component</h2>
+
+<form #chequeDepositForm="ngForm" (ngSubmit)="chequeDeposit(chequeDepositForm.value)">
+    From Account Number: <input type="number" name="fromAccountNo" required ngModel>
+    From IFSC: <input type="number" name="fromIfsc" required ngModel>
+    To Account Number: <input type="number" name="toAccountNo" required ngModel>
+    To IFSC: <input type="number" name="toIfsc" required ngModel>
+    Enter Amount: <input type="number" name="amount" required ngModel>
+    <button type="submit" [disabled]="!chequeDepositForm.valid">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+

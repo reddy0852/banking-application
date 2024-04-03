@@ -1,0 +1,11 @@
+<h2> Balance Enquiry</h2>
+<form #balanceEnquiryForm="ngForm" (ngSubmit)="balanceEnquiry(balanceEnquiryForm.value)">
+    Enter Account Number: <input type="number" name="accountNo" required ngModel><br>
+    Enter IFSC: <input type="number" name="ifsc" required ngModel><br>
+    <button type="submit" [disabled]="!balanceEnquiryForm.valid">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+<div *ngIf="balance !== undefined">
+    Balance: {{ balance }}
+  </div>

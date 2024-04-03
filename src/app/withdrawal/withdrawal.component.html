@@ -1,0 +1,13 @@
+<h2>withdrawal works!</h2>
+
+<form #withdrawalForm="ngForm" (ngSubmit)="withdraw(withdrawalForm.value)">
+    Enter Account Number: <input type="number" name="accountNo" required ngModel>
+    Enter IFSC: <input type="number" name="ifsc" required ngModel>
+    Enter Amount: <input type="number" name="amount" required ngModel>
+
+    <button type="submit" [disabled]="!withdrawalForm.valid">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+{{msg}}
+

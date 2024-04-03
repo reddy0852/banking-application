@@ -1,0 +1,13 @@
+<h2>Registration Page/Opening Account</h2>
+<hr>
+
+<form #bankAccount="ngForm" (ngSubmit)="register(bankAccount.value)">
+    Enter Name : <input type="text" name="name" required ngModel><br>
+    Enter Account : <input type="number" name="accountNo" minlength="6" required ngModel><br>
+    Enter IFSC : <input type="number" name="ifsc" required ngModel><br>
+    Enter Initial Amount : <input type="number" name="amount" ngModel><br>
+    <input type="submit" value="SUBMIT" [disabled]="!bankAccount.form.valid"><br>
+    <input type="reset" value="RESET">
+</form>
+
+{{msg}}

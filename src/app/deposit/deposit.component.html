@@ -1,0 +1,12 @@
+<h2>deposit works!</h2>
+
+<form #depositForm="ngForm" (ngSubmit)="deposit(depositForm.value)">
+    Enter Account Number: <input type="number" name="accountNo" required ngModel>
+    Enter IFSC: <input type="number" name="ifsc" required ngModel>
+    Enter Amount: <input type="number" name="amount" required ngModel>
+
+    <button type="submit" [disabled]="!depositForm.valid">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+{{msg}}
